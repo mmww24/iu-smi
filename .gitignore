@@ -1,0 +1,11 @@
+# Rust build artifacts (kept on disk for local builds, not tracked)
+target/
+
+# Python virtual environment (kept on disk, not tracked)
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Keep the prebuilt binary tracked so the repo is runnable without a build.
+# (Do NOT ignore iu-smi.exe.)

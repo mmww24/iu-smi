@@ -1,0 +1,19 @@
+[package]
+name = "iu-smi"
+version = "0.2.0"
+description = "Intel Core Ultra SoC monitor with all-smi-like TUI"
+edition = "2021"
+license = "Apache-2.0"
+
+[[bin]]
+name = "iu-smi"
+path = "src/main.rs"
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["clock"] }
+clap = { version = "4.5", features = ["derive"] }
+crossterm = "0.29"
+ratatui = "0.29"
+regex = "1.11"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
