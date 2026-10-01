@@ -196,10 +196,7 @@ The build writes `target\release\iu-smi.exe` and copies it to `iu-smi.exe`.
 / memory / per-process utilization) with colored utilization thresholds:
 
 ```powershell
-python .\iu_smi.py          # default: local monitor
-.\iu-smi.cmd
-.\all-smi.cmd
-.\nvitop.cmd
+python .\iu_smi.py          # default: local monitor (TUI)
 ```
 
 | Key | Action |
@@ -216,7 +213,7 @@ python .\iu_smi.py          # default: local monitor
 python .\iu_smi.py snapshot --format json        # machine-readable (agent-preferred)
 python .\iu_smi.py snapshot --format csv         # long CSV
 python .\iu_smi.py snapshot --format prometheus  # Prometheus text
-.\nvidia-smi.cmd                                 # nvidia-smi-style one-shot
+python .\iu_smi.py snapshot --format nvidia      # nvidia-smi-style one-shot
 python .\iu_smi.py api --port 9090               # Prometheus HTTP endpoint
 python .\iu_smi.py doctor                         # which PDH counters are visible
 ```
